@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+<link rel="stylesheet" type = "text/css"href="style.css">
+</head>
+<body>
+<header>
+<h1>My Portfolio</h1>
+</header>
+<section class="about">
+    <h2>About Me</h2>
+    <p>Hello, I am Abhishek, a passionate and dedicated second-year computer science student. <br>My journey in the world of technology began with a keen interest in understanding how software and hardware work together to create innovative solutions.<br> Through my coursework and personal projects, <br>I have developed a strong foundation in programming languages such as Java, Python, and C++, as well as a solid understanding of data structures and algorithms.<br>
+    Thank you for visiting my portfolio, <p\>
+</section>
+<div id="my-element">
+    <h3>EDUCATION BACKGROUND<h3\>
+</div>
+<div id="abc">
+    <h3>Student at NIET, Pursuing B.Tech , and Field of Study is CSE<h3\>
+</div>
+
+
+<p id ="c">Year of Graduation: 2026</p>
+
+
+<h2 id = "d">High School from Kendriya vidyalaya</h2>
+<p id ="e">Year of Graduation: 2019</p>
+
+
+<section class="projects">
+<h2>Projects</h2>
+<div class="project">
+<h3><li>Personal website or blog<li\><br>
+    <li>E-commerce website<li\><br>
+    <li>Responsive portfolio website<li\><br>
+    <li>Online resume/CV<li\><br></h3>
+<p>Personal website or blog where i using just simple html  css js and many more .</p>
+</div>
+<div class="project">
+<h3>E-commerce website</h3>
+<p>i have made this e - commerce website using html css ,javascript add some item for showcase.</p>
+</div>
+</section>
+<footer>
+<p>Contact me at: abhishekpatel0022@email.com</p>
+</footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div class="contact-form">
+    <h2>Contact Me</h2>
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+ 
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+<div>
+    <h3>     <h3\><br>
+        <br>
+        <br>
+</div>
+
+<script>
+    function submitForm(event) {
+        event.preventDefault();
+        let formData = new FormData(document.getElementById('contactForm'));
+        let data = {};
+        for (let entry of formData.entries()) {
+            data[entry[0]] = entry[1];
+        }
+        // You can handle the form data here (e.g., sending it to a server or saving it to a database).
+        console.log(data);
+        // Add your code to save the data or perform other actions with the form data.
+    }
+</script>
+<script>
+    function submitForm(event) {
+        event.preventDefault();
+        let formData = new FormData(document.getElementById('contactForm'));
+        fetch('save_contact.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log(data);
+            // Add code for any necessary UI updates after the form submission.
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+</script>
+
+</body>
+</html>
