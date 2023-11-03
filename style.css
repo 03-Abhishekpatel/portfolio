@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background:  skyblue;
+    color: white;
+}
+
+header {
+    background-color:black;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.about, .projects {
+    padding: 20px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color:black;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+#my-element{
+    padding: 20px;
+}
+#abc{
+    padding: 20px;
+}
+#d{
+    padding:20px;
+}
+#e{
+    padding:20px;
+}
+#c{
+    padding:20px;
+}
+
+
